@@ -79,6 +79,7 @@ void app_main(void)
         .lp_cutoff_hz = 5.0f,
         .min_step_interval_ms = 250,
         .k_threshold = 1.2f,
+        .min_std_g = 0.05f,
     };
     step_detector_init(&stepcfg);
 

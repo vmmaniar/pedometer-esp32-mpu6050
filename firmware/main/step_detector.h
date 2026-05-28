@@ -8,6 +8,7 @@ typedef struct {
     float    lp_cutoff_hz;          // low-pass on acceleration magnitude
     uint32_t min_step_interval_ms;  // refractory period between peaks
     float    k_threshold;           // adaptive threshold = mean + k * std
+    float    min_std_g;             // minimum-energy gate (default 0.05 g)
 } step_cfg_t;
 
 typedef struct {

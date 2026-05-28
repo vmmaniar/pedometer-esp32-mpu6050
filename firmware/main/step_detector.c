@@ -77,6 +77,7 @@ bool step_detector_update(float ax, float ay, float az, step_state_t *state)
 
     bool step = false;
     if (s_lp_state > threshold &&
+        std > s_cfg.min_std_g &&
         dt_us > (int64_t)s_cfg.min_step_interval_ms * 1000 &&
         s_hist_count > HIST_LEN / 2) {
         step = true;
