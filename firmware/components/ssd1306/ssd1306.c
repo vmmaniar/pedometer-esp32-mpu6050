@@ -11,13 +11,6 @@ static i2c_port_t s_port;
 static uint8_t s_addr;
 static uint8_t s_buf[SSD1306_BUF_BYTES];
 
-// 5x7 font, ASCII 0x20..0x7E. Compact subset — only chars we actually use.
-static const uint8_t FONT5x7[][5] = {
-    {0x00,0x00,0x00,0x00,0x00}, // space (0x20)
-    {0x00,0x06,0x5F,0x06,0x00}, // ! (0x21) — placeholder fill
-    // For brevity, characters not in the digits/letters set we use are rendered as full block
-};
-
 // Numeric digits 0-9 and uppercase letters used in this firmware
 static const uint8_t DIGITS[10][5] = {
     {0x3E,0x51,0x49,0x45,0x3E}, // 0
